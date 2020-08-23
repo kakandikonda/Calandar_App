@@ -1,0 +1,32 @@
+<div class="modal fade" id="editEvent" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Edit event</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="/event/<%= event._id %>?_method=PUT" method="POST">
+          <div class="modal-body">
+            <input type="text" class="form-control" value="<%= event.title %>" name="title">
+            <br>
+            <textarea class="form-control" name="description"><%= event.description %></textarea>
+            <br>
+            <input type="date" class="form-control" value="<%= event.sdate %>" name="sdate">
+            <br>
+            <input type="date" class="form-control" value="<%= event.edate %>" name="edate">
+            <br>
+            <input type="time" class="form-control" value="<%= event.stime %>" name="stime">
+            <br>
+            <input type="time" class="form-control" value="<%= event.etime %>" name="etime">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
+            <button type="submit" class="btn btn-primary">Edit Event</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

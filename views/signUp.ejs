@@ -1,0 +1,26 @@
+<%- include("partials/header") %>
+
+
+<div class="container">
+    <div class="mt-5 center">
+        <h1 class="">Sign Up</h1>
+        <br>
+        <form action="/signUp" method="POST">
+            <div class="col-md-6 mx-auto">
+                <input type="text" class="form-control" name="username" placeholder="username">
+                <br>
+                <input type="password" class="form-control" name="password" placeholder="password">
+                <br>
+                <button class="btn btn-primary user-btn">Sign Up</button>
+                <br>
+                <br>
+                <p>Already have an account <a href="/login">login</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+<%- include("partials/footer") %>

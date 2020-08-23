@@ -1,0 +1,37 @@
+<div class="modal fade" id="addEvent" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Create New Event</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="/event/new" method="POST">
+        <div class="modal-body">
+          <label for="">Title</label>
+          <input type="text" class="form-control" placeholder="Event title" name="title">
+          <br>
+          <label for="">Description</label>
+          <textarea class="form-control" placeholder="Event description" name="description"></textarea>
+          <br>
+          <label for="">Start Date</label>
+          <input type="date" class="form-control" placeholder="Start date" name="sdate">
+          <br>
+          <label for="">End Date</label>
+          <input type="date" class="form-control" placeholder="End date" name="edate">
+          <br>
+          <label for="">Start Time</label>
+          <input type="time" class="form-control" placeholder="Start time" name="stime">
+          <br>
+          <label for="">End Time</label>
+          <input type="time" class="form-control" placeholder="End time" name="etime">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
+          <button type="submit" class="btn btn-primary">Create Event</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
